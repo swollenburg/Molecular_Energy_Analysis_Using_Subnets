@@ -14,7 +14,7 @@ Date: Dec 11, 2023
 - README.md : This file.
 
 ### Analysis
-Detailed analysis can be found in the `ANI2-models_fkold.ipynb` notebook. A cooncluding summary is provided below.
+Detailed analysis can be found in the `ANI1-models_fkold.ipynb` notebook. A cooncluding summary is provided below.
 
 Three models were tested: an ANI1 recreation, a Residual neural network, and a linear model. It was found that the recreated ANI1 model performed the best showing the lowest average training, validation, and evaluation loss. The other two models did not train as quickly given the same parameters (number of epochs, optimizer, learning rate, etc.). Something that can be seen in the plots produced for each model is that both the ResNet and the ANI model produced periodic spikes in the loss and validation curves that were not present with the linear model training. While the linear model did not train to a lower loss than the other models, it appears that it was more resiliant to fluctuations in the dataset that produced these large loss spikes. Adding the linear features back into the model through the skip connection caused more noise to be introduced into the baseline when compared to the recreated ANI model.
 
